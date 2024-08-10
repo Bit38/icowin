@@ -129,3 +129,19 @@ int vec_add(struct vector *vec, void *item) {
   vec->data[vec->size++] = item;
   return 0;
 }
+
+char *to_human(uint32_t bytes, char *buf, size_t buf_size) {
+  char *sizes[] = {"B", "KB", "MB", "GB"};
+  int devided = 0;
+
+  if (buf == NULL)
+    return buf;
+
+  while (bytes > 1024 && devided < 3) {
+    bytes /= 1024;
+    devided++;
+  }
+
+  snprintf(buf, buf_size, "%d%s", bytes, sizes[devided]);
+  return buf;
+}

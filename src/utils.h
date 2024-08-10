@@ -43,4 +43,6 @@ void vec_destroy(struct vector *vec);
 
 int vec_add(struct vector *vec, void *item);
 
+char *to_human(uint32_t bytes, char *buf, size_t buf_size);
+
 #endif // UTILS_H
