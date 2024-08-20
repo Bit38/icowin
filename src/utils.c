@@ -69,7 +69,7 @@ enum file_error read_u16(FILE *file, uint16_t *val) {
   return FILE_OP_OK;
 }
 
-int read_u32(FILE *file, uint32_t *val) {
+enum file_error  read_u32(FILE *file, uint32_t *val) {
   if (file == NULL || val == NULL)
     return FILE_INVALID_PARAM_ERROR;
 

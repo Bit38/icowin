@@ -22,7 +22,9 @@ int info_command(struct parsed_cli *cli) {
     for (int j = 0; j < vec_size(ico->images); ++j) {
       printf("   IMAGE %d:\n", j + 1);
       struct icon_image *img = vec_get(ico->images, j);
-      printf("      SIZE: %dx%d\n", img->width, img->height);
+
+      // Value of zero in img->width or img->height indicates value 256
+      printf("      SIZE: %dx%d\n", (img->width == 0) ? 256 : img->width, (img->height == 0) ? 256 : img->height);
       printf("      FORMAT: %s\n", (img->format == IMAGE_FORMAT_BMP)
                                        ? "BMP (bitmap)"
                                        : "PNG (Portable Network Graphics)");

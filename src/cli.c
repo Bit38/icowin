@@ -45,7 +45,7 @@ struct parsed_cli parse_args(int argc, char **argv) {
       continue;
     }
     if (parsed.command == COMMAND_MISSING) {
-      if (strcmpi(argv[i], "info") == 0)
+      if (STRCMPI(argv[i], "info") == 0)
         parsed.command = COMMAND_INFO;
       else {
         usage(parsed.prog);

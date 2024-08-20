@@ -23,8 +23,8 @@ char *file_error_str(enum file_error code);
 enum file_error file_error_detect(FILE *f, char read_mode);
 
 char is_little_endian();
-int read_u16(FILE *file, uint16_t *val);
-int read_u32(FILE *file, uint32_t *val);
+enum file_error  read_u16(FILE *file, uint16_t *val);
+enum file_error  read_u32(FILE *file, uint32_t *val);
 
 /***************************************
  * Vector
