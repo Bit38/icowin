@@ -3,4 +3,4 @@
 *.ico
 *.cur
 *.ani
-
+build/

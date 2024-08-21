@@ -1,0 +1,6 @@
+if (BUILD_TESTING)
+    include_directories(utils_test ../dependencies/)
+    add_executable(utils_test utils_test.c ../src/utils.c)
+    target_link_libraries(utils_test PRIVATE munit)
+    add_test(NAME utils_test COMMAND utils_test)
+endif()

@@ -5,7 +5,7 @@ A simple command line tool for working with *.ico*, *.cur* and *.ani* files foun
 
 ## Usage
 ```
-Usage: a.exe <command> [options]
+Usage: icowin <command> [options]
 Tool for working with ico, cur and ani files
 
 COMMANDS:
