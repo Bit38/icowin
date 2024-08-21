@@ -137,7 +137,7 @@ char *to_human(uint32_t bytes, char *buf, size_t buf_size) {
   if (buf == NULL)
     return buf;
 
-  while (bytes > 1024 && devided < 3) {
+  while (bytes >= 1024 && devided < 3) {
     bytes /= 1024;
     devided++;
   }
